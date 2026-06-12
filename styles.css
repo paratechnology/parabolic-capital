@@ -881,6 +881,101 @@ h3 {
   margin: 0;
 }
 
+.standalone-page {
+  padding-top: 68px;
+}
+
+.page-hero {
+  min-height: 70svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 128px max(34px, calc((100vw - var(--max)) / 2 + 34px)) 86px;
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  font-size: clamp(3.25rem, 8vw, 7.2rem);
+}
+
+.page-hero p:last-child {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: rgba(255, 250, 241, 0.76);
+  font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+}
+
+.thesis-hero {
+  background-image:
+    linear-gradient(90deg, rgba(17, 19, 20, 0.92), rgba(17, 19, 20, 0.42)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=80");
+}
+
+.sectors-hero {
+  background-image:
+    linear-gradient(90deg, rgba(17, 19, 20, 0.9), rgba(17, 19, 20, 0.48)),
+    url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2200&q=80");
+}
+
+.portfolio-hero {
+  background-image:
+    linear-gradient(90deg, rgba(17, 19, 20, 0.92), rgba(17, 19, 20, 0.5)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=80");
+}
+
+.record-hero {
+  background-image:
+    linear-gradient(90deg, rgba(17, 19, 20, 0.92), rgba(17, 19, 20, 0.46)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=80");
+}
+
+.memo-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 72px;
+  padding: 96px max(34px, calc((100vw - var(--max)) / 2 + 34px));
+  border-bottom: 1px solid var(--line);
+}
+
+.memo-lead h2 {
+  max-width: 620px;
+}
+
+.memo-copy {
+  display: grid;
+  gap: 24px;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.5vw, 1.16rem);
+}
+
+.memo-copy p {
+  margin: 0;
+}
+
+.standalone-section {
+  padding: 96px max(34px, calc((100vw - var(--max)) / 2 + 34px));
+}
+
+.standalone-principles {
+  padding: 0 max(34px, calc((100vw - var(--max)) / 2 + 34px)) 96px;
+}
+
+.standalone-section .record-panel {
+  padding-top: 0;
+}
+
+.page-cta {
+  padding: 92px max(34px, calc((100vw - var(--max)) / 2 + 34px));
+}
+
+.page-cta h2 {
+  max-width: 850px;
+  margin-bottom: 28px;
+}
+
 .brief-page {
   padding-top: 68px;
 }
@@ -1054,7 +1149,8 @@ h3 {
   }
 
   .section-grid,
-  .contact-section {
+  .contact-section,
+  .memo-section {
     grid-template-columns: 1fr;
     gap: 44px;
   }
@@ -1144,6 +1240,11 @@ h3 {
     padding: 126px 22px 120px;
   }
 
+  .page-hero {
+    min-height: 74svh;
+    padding: 118px 22px 72px;
+  }
+
   h1 {
     font-size: 3.15rem;
   }
@@ -1176,6 +1277,16 @@ h3 {
   .model-section,
   .record-section {
     padding: 76px 22px;
+  }
+
+  .memo-section,
+  .standalone-section,
+  .page-cta {
+    padding: 76px 22px;
+  }
+
+  .standalone-principles {
+    padding: 0 22px 76px;
   }
 
   .principles {
