@@ -9,6 +9,7 @@ const contactSubmit = document.querySelector("[data-contact-submit]");
 const contactStatus = document.querySelector("[data-contact-status]");
 
 const CONTACT_ENDPOINT = "";
+const CONTACT_FALLBACK_EMAIL = "";
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -82,11 +83,6 @@ contactForm?.addEventListener("submit", async (event) => {
     return;
   }
 
-  if (!CONTACT_ENDPOINT) {
-    setContactStatus("Contact endpoint is not configured yet.", "error");
-    return;
-  }
-
   const payload = {
     name: String(formData.get("name") || "").trim(),
     organization: String(formData.get("organization") || "").trim(),
@@ -96,6 +92,22 @@ contactForm?.addEventListener("submit", async (event) => {
     source: "parabolic-capital-website",
     submittedAt: new Date().toISOString()
   };
+
+  if (!CONTACT_ENDPOINT) {
+    const fallbackEmail = CONTACT_FALLBACK_EMAIL.trim();
+    if (fallbackEmail) {
+      const subject = encodeURIComponent(`Parabolic Capital enquiry: ${payload.opportunityType}`);
+      const body = encodeURIComponent(
+        `Name: ${payload.name}\nOrganization: ${payload.organization}\nEmail: ${payload.email}\nOpportunity type: ${payload.opportunityType}\n\n${payload.message}`
+      );
+      window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
+      setContactStatus("Your email app should open with the enquiry prepared.", "success");
+      return;
+    }
+
+    setContactStatus("Online submissions are being connected. Please try again shortly.", "error");
+    return;
+  }
 
   try {
     setContactLoading(true);

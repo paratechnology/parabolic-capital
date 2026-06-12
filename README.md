@@ -31,6 +31,12 @@ The contact form is wired for an external API endpoint. Set the endpoint in `scr
 const CONTACT_ENDPOINT = "https://your-api.example.com/contact";
 ```
 
+Until the endpoint is available, you can optionally set an email fallback:
+
+```js
+const CONTACT_FALLBACK_EMAIL = "hello@paraboliccapital.ng";
+```
+
 The form sends a `POST` request with `Content-Type: application/json`:
 
 ```json
