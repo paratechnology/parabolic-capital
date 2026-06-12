@@ -134,7 +134,7 @@ contactForm?.addEventListener("submit", async (event) => {
 });
 
 const revealTargets = document.querySelectorAll(
-  ".intro-band, .principles article, .sector-ledger article, .image-statement-content, .portfolio-row, .model-steps article, .contact-section > *"
+  ".intro-band, .principles article, .sector-ledger article, .image-statement-content, .portfolio-row, .model-steps article, .record-section > *, .record-grid article, .contact-section > *"
 );
 
 revealTargets.forEach((target) => target.setAttribute("data-reveal", ""));
