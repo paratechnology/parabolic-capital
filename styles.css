@@ -1386,6 +1386,40 @@ h3 {
   color: var(--muted);
 }
 
+.candidate-ledger dd p {
+  margin: 0;
+}
+
+.candidate-product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.candidate-product-links a,
+.candidate-product-links span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  border: 1px solid rgba(89, 48, 36, 0.18);
+  padding: 7px 10px;
+  color: var(--oxblood);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.candidate-product-links span {
+  color: rgba(60, 54, 48, 0.62);
+}
+
+.candidate-product-links a:hover {
+  border-color: rgba(89, 48, 36, 0.5);
+  background: rgba(89, 48, 36, 0.07);
+}
+
 .candidate-close {
   background: var(--ink);
   color: var(--white);
