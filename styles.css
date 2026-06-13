@@ -1381,6 +1381,7 @@ h3 {
 }
 
 .candidate-gallery figure {
+  align-self: start;
   min-width: 0;
   margin: 0;
   border: 1px solid rgba(255, 250, 241, 0.14);
@@ -1397,7 +1398,7 @@ h3 {
 }
 
 .candidate-gallery figure:nth-child(n + 3) img {
-  aspect-ratio: 5 / 6;
+  aspect-ratio: 16 / 10;
   object-position: top center;
 }
 
