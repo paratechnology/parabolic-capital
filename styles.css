@@ -1229,6 +1229,7 @@ h3 {
 
 .candidate-narrative,
 .candidate-proof,
+.candidate-gallery,
 .candidate-ledger,
 .candidate-close {
   padding: 96px max(24px, calc((100vw - var(--max)) / 2 + 34px));
@@ -1354,6 +1355,68 @@ h3 {
 .candidate-proof-grid p {
   margin: 0;
   color: rgba(255, 250, 241, 0.66);
+}
+
+.candidate-gallery {
+  background: #181a1b;
+  color: var(--white);
+}
+
+.candidate-gallery-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.candidate-gallery-heading h2 {
+  max-width: 760px;
+}
+
+.candidate-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.candidate-gallery figure {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 250, 241, 0.14);
+  background: rgba(255, 250, 241, 0.04);
+}
+
+.candidate-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  border-bottom: 1px solid rgba(255, 250, 241, 0.14);
+}
+
+.candidate-gallery figure:nth-child(n + 3) img {
+  aspect-ratio: 5 / 6;
+  object-position: top center;
+}
+
+.candidate-gallery figcaption {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.candidate-gallery figcaption strong {
+  color: var(--brass);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.candidate-gallery figcaption span {
+  color: rgba(255, 250, 241, 0.68);
 }
 
 .candidate-ledger {
@@ -1773,15 +1836,27 @@ h3 {
   .candidate-narrative,
   .candidate-match,
   .candidate-proof,
+  .candidate-gallery,
   .candidate-ledger,
   .candidate-close {
     padding: 76px 22px;
   }
 
+  .candidate-gallery-heading,
   .candidate-match-list,
   .candidate-proof-grid,
+  .candidate-gallery-grid,
   .candidate-ledger dl div {
     grid-template-columns: 1fr;
+  }
+
+  .candidate-gallery-heading {
+    gap: 28px;
+  }
+
+  .candidate-gallery img,
+  .candidate-gallery figure:nth-child(n + 3) img {
+    aspect-ratio: 4 / 3;
   }
 
   .candidate-match-list article,
