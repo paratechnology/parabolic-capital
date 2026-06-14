@@ -22,31 +22,34 @@
           <span>SA</span>
           <strong>Sochima Afuba</strong>
         </div>
-        <a class="candidate-company-link" href="../index.html">View Parabolic Capital</a>
+        <nav class="candidate-nav" aria-label="Profile sections">
+          <a href="#technical-range">Range</a>
+          <a href="#projects">Projects</a>
+          <a href="#conversation">Talk</a>
+        </nav>
       </header>
 
       <section class="candidate-hero" id="top">
         <p class="eyebrow">Private product engineer profile</p>
         <h1>Sochima Afuba builds products that run real operations.</h1>
         <p>
-          I build operational software across legal, hospitality, business records, civic data,
-          events, fitness, local commerce, and internal developer tooling. Some products are live,
-          some are still in active rollout; the work below is the record I can speak to.
+          I build software for legal work, hospitality, small-business records, civic data, events,
+          fitness, local commerce, and the internal tooling needed to keep those products moving.
         </p>
       </section>
 
       <section class="candidate-summary" aria-label="Profile summary">
         <article>
           <span>Role target</span>
-          <p>Product Engineer, Full-stack Product Engineer, or Product Builder.</p>
+          <p>Product Engineer or Full-stack Product Engineer, with equal weight on judgment and delivery.</p>
         </article>
         <article>
           <span>Working style</span>
-          <p>I shape the workflow, design the screens, build the data and API layer, and keep refining until the product is usable.</p>
+          <p>I work close to the people using the system, model the workflow, then ship the smallest version that can survive real use.</p>
         </article>
         <article>
           <span>Evidence base</span>
-          <p>The projects below are actual products I built, not placeholder demos.</p>
+          <p>Parabolic Capital is the operating vehicle behind this work. This page is my personal engineering record.</p>
         </article>
       </section>
 
@@ -57,14 +60,43 @@
         </div>
         <div class="candidate-copy">
           <p>
-            I am less interested in piling on features than in finding the core path: who uses it,
-            what they need to record, what can go wrong, who approves it, and what the system must remember.
+            I look for the core path first: who uses the product, what they need to record, what can
+            go wrong, who approves it, and what the system must remember later.
           </p>
           <p>
-            That has led me to build law-firm workspaces, signing flows, shortlet booking tools,
-            hotel admin modules, invoicing and inventory software, city discovery and commerce, event
-            administration, polling-unit search, fitness scheduling, and a local dashboard for running projects.
+            That has meant working through real constraints with lawyers, property owners, hotel
+            operators, small-business users, fitness staff, and internal users rather than building
+            only from a clean brief.
           </p>
+        </div>
+      </section>
+
+      <section class="candidate-technical" id="technical-range" aria-label="Technical range">
+        <div>
+          <p class="eyebrow">Technical range</p>
+          <h2>Comfortable across the product surface, from interface to rollout.</h2>
+        </div>
+        <div class="candidate-stack-list">
+          <article>
+            <h3>Frontend</h3>
+            <p>Angular, Ionic-style app surfaces, responsive layouts, form-heavy workflows, dashboard views, and public websites.</p>
+          </article>
+          <article>
+            <h3>Backend</h3>
+            <p>Node, Express, NestJS, REST APIs, validation, auth boundaries, role access, document flows, and notification paths.</p>
+          </article>
+          <article>
+            <h3>Data</h3>
+            <p>Firestore, Supabase Postgres, business records, migrations, search, audit trails, and state models that survive edge cases.</p>
+          </article>
+          <article>
+            <h3>Platforms</h3>
+            <p>Firebase Hosting and Functions, Cloud Run, Docker, Paystack, Capacitor Android apps, and Tauri desktop packaging.</p>
+          </article>
+          <article>
+            <h3>Delivery</h3>
+            <p>Scope trimming, release slices, production checks, direct user feedback, and careful review of generated code before it ships.</p>
+          </article>
         </div>
       </section>
 
@@ -82,25 +114,15 @@
           <article>
             <span>02</span>
             <h3>Interface craft</h3>
-            <p>I care about screens people can use every day: mobile density, empty states, failure states, and small details that reduce confusion.</p>
+            <p>I care about screens people can use every day: mobile density, empty states, failure states, and small wording choices that reduce confusion.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Full-stack delivery</h3>
-            <p>I move across client apps, APIs, auth, persistence, payments, notifications, documents, and deployment work when the feature needs it.</p>
-          </article>
-          <article>
-            <span>04</span>
             <h3>Operational thinking</h3>
             <p>I think in records, statuses, permissions, audit trails, reports, and handoffs because that is where real products need care.</p>
           </article>
           <article>
-            <span>05</span>
-            <h3>Clear judgment</h3>
-            <p>I can reduce scope, question assumptions, and keep the work pointed at the user instead of the biggest possible feature list.</p>
-          </article>
-          <article>
-            <span>06</span>
+            <span>04</span>
             <h3>Follow-through</h3>
             <p>I stay with the work past the first render: edge cases, copy, responsiveness, backend contracts, and rollout details matter.</p>
           </article>
@@ -176,11 +198,11 @@
         </div>
       </section>
 
-      <section class="candidate-ledger">
+      <section class="candidate-ledger" id="projects">
         <div>
           <p class="eyebrow">Product notes</p>
           <h2>Projects I can discuss in an interview.</h2>
-          <p class="candidate-section-note">Open a project name for the technical case note. The proof links beside each product point to the live or public surface where one is available.</p>
+          <p class="candidate-section-note">Open a project name for the technical case note. Proof links point to the live or public surface where one is available.</p>
         </div>
         <dl>
           <div>
@@ -286,13 +308,17 @@
         </dl>
       </section>
 
-      <section class="candidate-close">
-        <p class="eyebrow">Hiring note</p>
-        <h2>I am strongest where product judgment and engineering execution have to happen together.</h2>
+      <section class="candidate-close" id="conversation">
+        <p class="eyebrow">Conversation</p>
+        <h2>If the role needs someone who can shape the work and ship it, this is the work I can defend.</h2>
         <p>
-          Several repositories are private because they contain product or client context. I can still
-          walk through architecture, selected code, tradeoffs, and product decisions in a live interview.
+          Several repositories are private because they contain product or client context. I can walk
+          through architecture, selected code, tradeoffs, and product decisions in a live interview.
         </p>
+        <div class="candidate-close-actions">
+          <a href="#projects">Review project notes</a>
+          <a href="../index.html">Parabolic Capital context</a>
+        </div>
       </section>
     </main>
   </body>
