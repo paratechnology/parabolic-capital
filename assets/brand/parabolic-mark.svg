@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Parabolic Capital">
+  <defs>
+    <linearGradient id="mark-bg" x1="12" y1="8" x2="84" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#202524"/>
+      <stop offset="1" stop-color="#0f1112"/>
+    </linearGradient>
+    <linearGradient id="mark-brass" x1="24" y1="18" x2="78" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f1d48a"/>
+      <stop offset=".5" stop-color="#c79a4d"/>
+      <stop offset="1" stop-color="#8f6a34"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="86" height="86" rx="20" fill="url(#mark-bg)"/>
+  <rect x="5.75" y="5.75" width="84.5" height="84.5" rx="19.25" fill="none" stroke="#fffaf1" stroke-opacity=".14" stroke-width="1.5"/>
+  <path d="M20 73C43.5 73 63.8 58.8 75.8 25" fill="none" stroke="url(#mark-brass)" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M24 67.5C40.6 67.5 55.6 58.2 66.6 38.7" fill="none" stroke="#fffaf1" stroke-opacity=".34" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M30.5 66V25.5h22.2c9.7 0 15.9 5.5 15.9 14.1 0 8.8-6.4 14.2-16.2 14.2H42.2V66H30.5Zm11.7-21.5h9.5c3.5 0 5.5-1.8 5.5-4.8 0-3.1-2-4.8-5.5-4.8h-9.5v9.6Z" fill="#fffaf1"/>
+  <circle cx="76" cy="25" r="4.2" fill="url(#mark-brass)"/>
+</svg>
