@@ -1191,7 +1191,8 @@ h3 {
 .candidate-hero h1 {
   max-width: 980px;
   color: var(--white);
-  font-size: clamp(3.45rem, 8vw, 7.6rem);
+  font-size: clamp(2.9rem, 5.6vw, 5.75rem);
+  line-height: 0.98;
 }
 
 .candidate-hero p:last-child {
@@ -2441,7 +2442,7 @@ h3 {
 
   .candidate-hero h1 {
     max-width: 100%;
-    font-size: clamp(2.82rem, 13vw, 3.28rem);
+    font-size: clamp(2.26rem, 10vw, 2.82rem);
     line-height: 1;
   }
 
