@@ -592,13 +592,27 @@ h3 {
   margin: 0;
 }
 
-.portfolio-row > span:last-child {
+.portfolio-row > span:last-child,
+.portfolio-visit-link {
   justify-self: end;
   color: var(--oxblood);
   font-size: 0.78rem;
   font-weight: 800;
   text-align: right;
   text-transform: uppercase;
+}
+
+.portfolio-visit-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition:
+    color 180ms var(--ease),
+    text-decoration-color 180ms var(--ease);
+}
+
+.portfolio-visit-link:hover {
+  color: var(--brass);
 }
 
 .model-section {
@@ -2095,7 +2109,8 @@ h3 {
   }
 
   .portfolio-row > p,
-  .portfolio-row > span:last-child {
+  .portfolio-row > span:last-child,
+  .portfolio-visit-link {
     grid-column: 2;
     justify-self: start;
     text-align: left;
