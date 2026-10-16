@@ -63,7 +63,8 @@ const cases = [
     slug: 'cityvibe', name: 'CityVibe', sector: 'Local commerce', surface: 'Consumer, business, and admin frontends',
     heading: 'Interfaces for distinct audiences.',
     lead: 'One product family spanning city discovery, venue activity, orders, reservations, and the tools businesses use to operate.',
-    image: 'cityvibe-business-dashboard.png', imageAlt: 'CityVibe business dashboard with venue activity', imageCaption: 'The business view turns venue activity into manageable work.',
+    image: 'cityvibe-business-dashboard.png', imageAlt: 'City Vibe Business desktop dashboard showing venue overview, service queues and staff attendance', imageCaption: 'Venue overview, service queues and staff attendance in the desktop workspace.',
+    imageWidth: 1920, imageHeight: 1200,
     context: 'CityVibe serves different people with different goals. Consumers want to discover and act quickly; venues need to manage activity; admins need oversight. My frontend focus was giving each audience a coherent surface while keeping shared objects and states recognizable.',
     steps: [
       ['Audience-specific flows', 'Separated discovery, business operations, and admin control with appropriate navigation and hierarchy.'],
@@ -121,6 +122,10 @@ function render(item, index) {
   const next = cases[(index + 1) % cases.length];
   const title = `${item.name} | Ezenwadi Valentine Frontend Case Note`;
   const url = `${base}projects/${item.slug}.html`;
+  const imageDimensions = item.imageWidth && item.imageHeight
+    ? ` width="${item.imageWidth}" height="${item.imageHeight}"` : '';
+  const imageMeta = item.imageWidth && item.imageHeight
+    ? `\n    <meta property="og:image:width" content="${item.imageWidth}" />\n    <meta property="og:image:height" content="${item.imageHeight}" />\n    <meta property="og:image:alt" content="${escapeHtml(item.imageAlt)}" />` : '';
   const links = item.links.map(([label, href]) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer nofollow">${escapeHtml(label)} ↗</a>`).join('');
   const steps = item.steps.map(([heading, body], i) => `<article class="ev-case-step"><span>0${i + 1}</span><h3>${escapeHtml(heading)}</h3><p>${escapeHtml(body)}</p></article>`).join('');
   return `<!doctype html>
@@ -136,7 +141,7 @@ function render(item, index) {
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(item.lead)}" />
     <meta property="og:url" content="${url}" />
-    <meta property="og:image" content="https://www.paraboliccapital.ng/assets/resume/${escapeHtml(item.image)}" />
+    <meta property="og:image" content="https://www.paraboliccapital.ng/assets/resume/${escapeHtml(item.image)}" />${imageMeta}
     <meta name="twitter:card" content="summary_large_image" />
     <title>${escapeHtml(title)}</title>
     <link rel="icon" href="../../../favicon.svg" type="image/svg+xml" />
@@ -155,7 +160,7 @@ function render(item, index) {
         <div><p class="ev-case-overline">${escapeHtml(String(index + 1).padStart(2, '0'))} / Frontend case note · ${escapeHtml(item.sector)}</p><h1 id="case-title">${escapeHtml(item.name)}.</h1><p>${escapeHtml(item.lead)}</p></div>
         <dl class="ev-case-facts"><div><dt>Role</dt><dd>Lead frontend developer</dd></div><div><dt>Product surface</dt><dd>${escapeHtml(item.surface)}</dd></div><div><dt>Sector</dt><dd>${escapeHtml(item.sector)}</dd></div></dl>
       </section>
-      <figure class="ev-case-media"><img src="../../../assets/resume/${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}" /><figcaption><span>${escapeHtml(item.name)} / Product view</span><span>${escapeHtml(item.imageCaption)}</span></figcaption></figure>
+      <figure class="ev-case-media"><img src="../../../assets/resume/${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}"${imageDimensions} /><figcaption><span>${escapeHtml(item.name)} / Product view</span><span>${escapeHtml(item.imageCaption)}</span></figcaption></figure>
       <section class="ev-case-story" aria-labelledby="story-title"><div class="ev-section-label"><span>Frontend focus</span><span>Application design and implementation</span></div><div class="ev-case-story-grid"><h2 id="story-title">${escapeHtml(item.heading)}</h2><div><p class="ev-case-story-intro">${escapeHtml(item.context)}</p><div class="ev-case-steps">${steps}</div><div class="ev-case-related">${links}</div></div></div></section>
       <div class="ev-case-next"><span>Next project</span><a href="${escapeHtml(next.slug)}.html">${escapeHtml(next.name)} ↗</a></div>
     </main>

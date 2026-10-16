@@ -1860,6 +1860,21 @@ h3 {
   gap: 14px;
 }
 
+.case-study-media-grid--cityvibe {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-study-media-grid--cityvibe .case-study-shot img {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+}
+
+.ev-case-media img[src$="cityvibe-business-dashboard.png"] {
+  height: auto;
+  max-height: none;
+}
+
 .case-study-shot {
   min-width: 0;
   margin: 0;
