@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const base = 'https://www.paraboliccapital.ng/resume/ezenwadi-valentine-2026/';
 
-// Keep these case notes aligned with the nine products on Ezenwadi Valentine's portfolio page.
+// Keep these case notes aligned with the eight products on Ezenwadi Valentine's portfolio page.
 const cases = [
   {
     slug: 'quickprolaw', name: 'QuickProLaw', sector: 'Legal operations', surface: 'Website and web application',
@@ -71,19 +71,6 @@ const cases = [
       ['Live status', 'Made order and reservation changes visible in the interfaces used during operations.']
     ],
     links: [['Public website', 'https://vibe-0001.web.app'], ['Web app', 'https://vibe-app-761331655125.web.app']]
-  },
-  {
-    slug: 'codedevents', name: 'CodedEvents', sector: 'Event operations', surface: 'Public website and event administration',
-    heading: 'Event operations in real time.',
-    lead: 'Event tooling shaped around setup, access, validation, check-in, and the operational view needed when an event is live.',
-    image: 'codedevents-website.png', imageAlt: 'CodedEvents public website', imageCaption: 'The public front introduces the event platform and its operating use.',
-    context: 'An event product has to work before, during, and after an event. The frontend challenge is to make setup, permissioned actions, attendee validation, and reporting easy to scan under time pressure.',
-    steps: [
-      ['Check-in workflow', 'Prioritized validation and check-in actions for fast use during live events.'],
-      ['Role clarity', 'Made role-based areas and allowed actions apparent to organizers and staff.'],
-      ['Lifecycle consistency', 'Kept setup, operations, revenue, and reporting visually consistent across event stages.']
-    ],
-    links: [['Public website', 'https://codedevents-950ac.web.app']]
   },
   {
     slug: 'teddy-city-hotels', name: 'Teddy City Hotels', sector: 'Hotel experience', surface: 'Public website and hotel operations',
